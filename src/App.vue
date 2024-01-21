@@ -57,7 +57,7 @@ export default {
 }
 
 .portfolio-title {
-  margin-left: 16px;
+  margin-left: 0px;
 }
 
 .text-link {
