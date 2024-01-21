@@ -93,7 +93,7 @@ export default {
       portfolio: [
         {
           title: "音楽教室",
-          description: "音楽教室で体験レッスンを予約できるサイトをイメージして作成しました。管理者画面では、レッスンの登録や講師の登録も出来ます。（TOP画面のロゴ等も無料のサイトで自作しました。）",
+          description: "音楽教室で体験レッスンを予約できるサイトをイメージして作成しました。管理者画面では、レッスンの登録や講師の登録が行えます。また、TOP画面のロゴ等も無料のサイトで自作しました。（github経由でXserveにデプロイしています。）",
           skill: '使用技術 : Laravel(Jetstream x Livewire)、Tailwind CSS',
           url: "https://music-school-ralgo.com/",
           imageUrl: "logo.png",
