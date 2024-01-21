@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="indigo" dark>
+    <v-app-bar app color="indigo" dark fixed>
       <v-toolbar-title>My Portfolio</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn text to="/">ホーム</v-btn>

@@ -2,7 +2,7 @@
   <div>
     <v-container>
       <v-row justify="center">
-        <v-col cols="8" class="text-center">
+        <v-col cols="9" class="text-center">
           <h1>~ じゃんけん ~</h1>
           
           <v-img 

@@ -3,7 +3,7 @@
     <v-container>
       <v-row>
         <v-col class="mt-8" cols="12" md="7">
-          <h1 class="">~ 作品紹介 ~</h1>
+          <h1 class="text-center">~ 作品紹介 ~</h1>
           <v-card v-for="(project, index) in portfolio" :key="index" class="mt-12" >
             <v-row>
               <v-col cols="4">
@@ -29,7 +29,7 @@
         </v-col>
 
         <v-col class="mx-auto mt-8" cols="12" md="4">
-          <h1 class="">~ 学習歴 ~</h1>
+          <h1 class="text-center">~ 学習歴 ~</h1>
           <ul class="custom-list">
             <li v-for="(entry, index) in learningHistory" 
             :key="index"
