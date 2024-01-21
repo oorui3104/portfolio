@@ -1,12 +1,14 @@
 <template>
   <div>
         <v-container>
-          <div class="mb-8">
+          <v-row class="">
+            <v-col cols="12">
+              <div class="mb-8">
             <h1 class="text-center">~ 猫を眺めよう ~</h1>
             <p class="text-center">(Click on Button!!)</p>
           </div>
           
-          <v-row class="text-center">
+          <v-row class="text-center mr-2">
             <v-col 
               v-for="cat in cats"
               :key="cat.id" 
@@ -22,6 +24,9 @@
               </v-btn>
             </v-col>
           </v-row>
+            </v-col>
+          </v-row>
+         
         </v-container>
 
       <div v-show="isShowLoad">

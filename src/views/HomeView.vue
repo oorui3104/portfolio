@@ -4,24 +4,17 @@
       <v-row>
         <v-col class="mt-8" cols="12" md="7">
           <h1 class="text-center">~ 作品紹介 ~</h1>
-          <v-card v-for="(project, index) in portfolio" :key="index" class="mt-12" >
-            <v-row>
-              <v-col cols="4">
-                <router-link v-if="project.isExternal" :to="project.url" class="block-link">
-                  <v-img :src="require(`@/assets/${project.imageUrl}`)" alt="Project Image" width="170" height="170" contain></v-img>
-                </router-link>
-                <a v-else :href="project.url" class="block-link" target="_blank">
-                  <v-img :src="require(`@/assets/${project.imageUrl}`)" alt="Project Image" width="170" height="170" contain></v-img>
-                </a>
+          <v-card v-for="(project, index) in portfolio" :key="index" class="mt-12 px-4">
+            <v-row align="center">
+              <v-col cols="12" sm="4"> 
+                <v-img :src="require(`@/assets/${project.imageUrl}`)" alt="Project Image" width="100%" height="auto" contain max-height="200"></v-img>
               </v-col>
-              <v-col cols="8">
+              <v-col cols="12" sm="8">
                 <v-card-text>
-                  <h2>{{ project.title }}</h2>
-                  <p class="mt-4">{{ project.description }}
-                  </p> 
-                  <p  class="mt-4 mb-0" >{{ project.skill }}
-                  </p> 
-                    <a v-if="project.erUrl" :href="project.erUrl" class="block-link" target="_blank" style="margin: 0;">テーブル設計はこちら</a>
+                  <h2 class="text-center">- {{ project.title }} -</h2>
+                  <p class="mt-4">{{ project.description }}</p> 
+                  <p class="mt-4 mb-0">{{ project.skill }}</p> 
+                  <a v-if="project.erUrl" :href="project.erUrl" class="block-link" target="_blank" style="margin: 0;">テーブル設計はこちら</a>
                 </v-card-text>
               </v-col>
             </v-row>
@@ -79,7 +72,7 @@ export default {
         },
         {
           date: "2023.12 ~",
-          description: "下記の教材を参考にポートフォリオ（作品集の「音楽教室」）を作成し、デプロイする。",
+          description: "下記の教材を参考にポートフォリオ（作品集の「音楽教室」）を作成し、Xserveにデプロイする。",
           movieTitle: "イベント予約システムをつくってみよう",
           movieUrl: "https://www.udemy.com/course/laravel-livewire-event-calendar/"
         },
@@ -93,7 +86,7 @@ export default {
       portfolio: [
         {
           title: "音楽教室",
-          description: "音楽教室で体験レッスンを予約できるサイトをイメージして作成しました。管理者画面では、レッスンの登録や講師の登録が行えます。また、TOP画面のロゴ等も無料のサイトで自作しました。（github経由でXserveにデプロイしています。）",
+          description: "音楽教室で体験レッスンを予約できるサイトをイメージして作成しました。管理者画面では、レッスンの登録や講師の登録が行えます（メールアドレス「test@test.com」パスワード「passwod」 でログインできます）。また、TOP画面のロゴ等も無料のサイトで自作しました。なお、こちらのサイトはgithub経由でXserveにデプロイしています。",
           skill: '使用技術 : Laravel(Jetstream x Livewire)、Tailwind CSS',
           url: "https://music-school-ralgo.com/",
           imageUrl: "logo.png",
@@ -110,7 +103,7 @@ export default {
         },
         {
           title: "じゃんけんゲーム",
-          description: "vue.jsに慣れるための練習として作成しました。",
+          description: "vue.jsに慣れるための練習として作成しました。あいこの場合には自動的に再スタートします。",
           skill: '使用技術 : vue.js 2(vuetify)',
           url: "/JankenApp",
           imageUrl: "choki.png",
@@ -126,7 +119,8 @@ export default {
 <style>
 .custom-list {
   list-style-type: none;
-  padding: 0; 
+  padding: 0;
+  margin: 0; 
 }
 
 .custom-date {
