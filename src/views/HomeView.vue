@@ -8,10 +8,10 @@
             <v-row>
               <v-col cols="4">
                 <router-link v-if="project.isExternal" :to="project.url" class="block-link">
-                  <v-img :src="require(`../assets/${project.imageUrl}`)" alt="Project Image" width="170" height="170" contain></v-img>
+                  <v-img :src="require(`@/assets/${project.imageUrl}`)" alt="Project Image" width="170" height="170" contain></v-img>
                 </router-link>
                 <a v-else :href="project.url" class="block-link" target="_blank">
-                  <v-img :src="require(`../assets/${project.imageUrl}`)" alt="Project Image" width="170" height="170" contain></v-img>
+                  <v-img :src="require(`@/assets/${project.imageUrl}`)" alt="Project Image" width="170" height="170" contain></v-img>
                 </a>
               </v-col>
               <v-col cols="8">

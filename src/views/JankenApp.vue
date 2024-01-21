@@ -6,7 +6,7 @@
           <h1>~ じゃんけん ~</h1>
           
           <v-img 
-            :src="require(`../assets/${choices[randomNumber].img}`)"
+            :src="require(`@/assets/${choices[randomNumber].img}`)"
             contain
             class="mx-auto"
             width="300"
