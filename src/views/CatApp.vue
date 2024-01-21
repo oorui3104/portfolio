@@ -7,18 +7,17 @@
           </div>
           
           <v-row class="text-center">
-            <v-col
-          v-for="cat in cats"
-          :key="cat.id"
-          cols="4" md="4" 
-          >
-          <v-btn
-            @click="getId(cat.id)"
-            depressed
-            color="primary"
-            block
-            style="margin: 0; padding: 4px;"
-          >
+            <v-col 
+              v-for="cat in cats"
+              :key="cat.id" 
+              cols="4"
+            >
+              <v-btn 
+                @click="getId(cat.id)"
+                depressed 
+                color="primary"
+                style="margin: 0; padding: 8px;"
+                 >
                 {{ cat.name }}
               </v-btn>
             </v-col>
