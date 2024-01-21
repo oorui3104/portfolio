@@ -4,10 +4,19 @@
       <v-row>
         <v-col class="mt-8" cols="12" md="7">
           <h1 class="text-center">~ 作品紹介 ~</h1>
-          <v-card v-for="(project, index) in portfolio" :key="index" class="mt-12 px-4">
+          <v-card v-for="(project, index) in portfolio" :key="index" class="mt-12 px-12">
             <v-row align="center">
               <v-col cols="12" sm="4"> 
-                <v-img :src="require(`@/assets/${project.imageUrl}`)" alt="Project Image" width="100%" height="auto" contain max-height="200"></v-img>
+                <template v-if="project.isExternal">
+                  <a :href="project.url" target="_blank">
+                    <v-img :src="require(`@/assets/${project.imageUrl}`)" alt="プロジェクトの画像" width="100%" height="auto" contain max-height="200"></v-img>
+                  </a>
+                </template>
+                <template v-else>
+                  <router-link :to="project.url">
+                    <v-img :src="require(`@/assets/${project.imageUrl}`)" alt="プロジェクトの画像" width="100%" height="auto" contain max-height="200"></v-img>
+                  </router-link>
+                </template>
               </v-col>
               <v-col cols="12" sm="8">
                 <v-card-text>
@@ -90,7 +99,7 @@ export default {
           skill: '使用技術 : Laravel(Jetstream x Livewire)、Tailwind CSS',
           url: "https://music-school-ralgo.com/",
           imageUrl: "logo.png",
-          isExternal: false, 
+          isExternal: true, 
           erUrl: 'https://app.diagrams.net/#G1N9eRFAlDVV1-K7mpSbkGE6diN-N1JCMw'
         },
         {
@@ -99,7 +108,7 @@ export default {
           skill: '使用技術 : vue.js 2(vuetify)、Animate.css',
           url: "/catApp",
           imageUrl: "cat.png",
-          isExternal: true,
+          isExternal: false,
         },
         {
           title: "じゃんけんゲーム",
@@ -107,7 +116,7 @@ export default {
           skill: '使用技術 : vue.js 2(vuetify)',
           url: "/JankenApp",
           imageUrl: "choki.png",
-          isExternal: true
+          isExternal: false
         },
       ]
     };
